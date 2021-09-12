@@ -56,7 +56,7 @@ async function main() {
     const app = express();
     app.use(cookieParser());
     const corsOptions = {
-        origin: 'https://workflow-manager-frontend-deploy.vercel.app/',
+        origin: 'https://workflow-manager-frontend-deploy.vercel.app',
         credentials: true
     }
     app.use(cors(corsOptions));
