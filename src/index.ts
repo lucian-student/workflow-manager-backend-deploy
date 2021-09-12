@@ -55,11 +55,11 @@ async function main() {
 
     const app = express();
     app.use(cookieParser());
-    const corsOptions = {
+
+    app.use(cors({
+        credentials: true,
         origin: 'https://workflow-manager-frontend-deploy.vercel.app',
-        credentials: true
-    }
-    app.use(cors(corsOptions));
+    }));
 
     // add route for token for subscribtions¨ /refresh_token/subscribtion
     // subscribtion token expiration 7days
